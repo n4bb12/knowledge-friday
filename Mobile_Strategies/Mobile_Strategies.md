@@ -12,6 +12,16 @@ marp: true
   section {
     font-size: 1.5rem;
   }
+  img {
+    display: inline;
+  }
+  table img {
+    vertical-align: text-bottom;
+  }
+  section > img {
+    display: table;
+    margin: 0 auto;
+  }
   h1,
   h2,
   h3,
@@ -30,16 +40,6 @@ marp: true
     width: 100%;
     text-align: center;
   }
-  h1 img,
-  h2 img,
-  h3 img,
-  h4 img,
-  h5 img,
-  h6 img,
-  p img,
-  pre img {
-    display: inline;
-  }
   blockquote,
   ul,
   ol,
@@ -50,10 +50,6 @@ marp: true
   }
   strong {
     color: #0366d6 !important;
-  }
-  img {
-    display: table;
-    margin: 0 auto;
   }
   footer {
     font-size: 0.75rem;
@@ -85,18 +81,22 @@ h1 { padding-top: 25%; padding-right: 25%; }
 
 ## Revenue & Download Share
 
-[Source](https://sensortower.com/blog/app-revenue-and-downloads-2019) | [More stats](https://www.businessofapps.com/data/app-statistics)
+[Source](https://sensortower.com/blog/app-revenue-and-downloads-2019)
 
 ![bg left:70% height: 100%](https://s3.amazonaws.com/sensortower-itunes/blog/2020/01/2019-app-downloads-worldwide.png)
 ![bg right:70% height: 100%](https://s3.amazonaws.com/sensortower-itunes/blog/2020/01/2019-app-revenue-worldwide.png)
 
 ## Platforms
 
-![bg right:75% height:150px](https://upload.wikimedia.org/wikipedia/commons/5/54/Blank_Canvas_on_Transparent_Background.png)
-![bg right:75% height:150px](https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png)
-![bg right:75% height:100px](https://upload.wikimedia.org/wikipedia/commons/4/48/Apple_iOS_new.svg)
-![bg right:75% height:150px](https://upload.wikimedia.org/wikipedia/commons/7/74/Internet-web-browser.svg)
-![bg right:75% height:150px](https://upload.wikimedia.org/wikipedia/commons/5/54/Blank_Canvas_on_Transparent_Background.png)
+<style scoped>
+section { justify-content: flex-start; }
+</style>
+
+![bg height:150px](https://upload.wikimedia.org/wikipedia/commons/5/54/Blank_Canvas_on_Transparent_Background.png)
+![bg height:150px](https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png)
+![bg height:100px](https://upload.wikimedia.org/wikipedia/commons/4/48/Apple_iOS_new.svg)
+![bg height:150px](https://upload.wikimedia.org/wikipedia/commons/7/74/Internet-web-browser.svg)
+![bg height:150px](https://upload.wikimedia.org/wikipedia/commons/5/54/Blank_Canvas_on_Transparent_Background.png)
 
 ## Outline
 
@@ -167,8 +167,9 @@ p { color: white; font-weight: bold; }
 - Top lists
 - Store page
 - [Android Deep Links](https://developer.android.com/training/app-links/deep-linking) | [iOS Universal Links](https://developer.apple.com/ios/universal-links/)
+- [Google Play Pass](https://play.google.com/about/play-pass/) | [Apple Arcade](https://www.apple.com/de/apple-arcade/)
 
---> *Enter through web*
+--> *Get users through the web*
 
 ## Finding Web Content
 
@@ -182,16 +183,22 @@ p { color: white; font-weight: bold; }
 ## Store Onboarding
 
 High-friction install-first philosophy:
-(Find) - Install - Wait - Open - Use
+(Find) - Download (Wait) - Install (Wait) - Open - Use
 
 - [Android Instant Apps](https://www.youtube.com/watch?v=oispNrpGnIY) | [iOS App Clips](https://www.youtube.com/watch?v=IqP_iojZXxQ)
 
---> *Enter through web*
+--> *Requires a website*
 
 ## Web Onboarding
 
 Use-first philosophy:
 (Find) - Open - Use - (Install)
+
+## Market Data, Analytics & News
+
+- https://www.businessofapps.com/data/app-statistics/
+- https://www.businessofapps.com/data/app-revenues/
+- https://www.appannie.com/en/insights/
 
 # Platform Features
 
@@ -201,18 +208,32 @@ h1 { padding-top: 40%; }
 
 ![bg](https://images.unsplash.com/photo-1517098343-2547f8016001?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2168&q=80)
 
-<!-- https://whatwebcando.today -->
+----
 
-## Native Advantages
+![height:75px](https://upload.wikimedia.org/wikipedia/commons/d/d5/Progressive_Web_Apps_Logo.svg)
 
-Performance, Push, Offline, 
+Web applications built on standard browser APIs 
+that feel and can be used like native mobile apps.
 
-- bluetooth?
-- payment?
-- credentials?
-- camera?
+## Features (OS Integration, Sensors)
 
-# Development Frameworks
+https://whatwebcando.today
+
+- Live feature test
+- Detailed descriptions
+- Code examples and API references
+- Desktop & Mobile stats
+
+## Case Studies
+
+Facebook Lite, Twitter Lite, Aliexpress, Forbes, Pinterest, 
+Uber, Tinder, Flipboard, Starbucks, Alibaba, Lancome
+
+- [Google PWA Case Studies](https://developers.google.com/web/showcase)
+- [PWA Stats Case Studies](https://www.pwastats.com/)
+- [Mobile Web vs. Native Apps or Why You Want Both](https://www.lukew.com/ff/entry.asp?1954)
+
+# Frameworks
 
 <style scoped>
 h1 { padding-bottom: 50%; text-align: left }
@@ -220,57 +241,64 @@ h1 { padding-bottom: 50%; text-align: left }
 
 ![bg](https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80)
 
-## Candidates
+## Native & Cross-Platform Frameworks
 
-- Android SDK
-- iOS SDK
-- Flutter
-- React Native
-- Ionic
-- NativeScript
+<style scoped>
+section { justify-content: flex-start; }
+</style>
+
+![bg height:150px](https://upload.wikimedia.org/wikipedia/commons/5/54/Blank_Canvas_on_Transparent_Background.png)
+![bg height:75px](https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png) 
+![bg height:75px](https://upload.wikimedia.org/wikipedia/commons/4/48/Apple_iOS_new.svg)
+![bg height:75px](https://cdn.worldvectorlogo.com/logos/flutter-logo.svg)
+![bg height:75px](https://reactnative.dev/img/header_logo.svg) 
+![bg height:75px](https://ionicframework.com/img/meta/favicon-192x192.png) 
+![bg height:75px](https://upload.wikimedia.org/wikipedia/commons/4/4f/NativeScript_logo.png) 
+![bg height:75px](https://seeklogo.com/images/X/xamarin-logo-348B1EB629-seeklogo.com.png) 
+![bg height:75px](https://s3.amazonaws.com/uno-website-assets/wp-content/uploads/2018/08/22113759/UnoLogoSmall.png) 
+![bg height:150px](https://upload.wikimedia.org/wikipedia/commons/5/54/Blank_Canvas_on_Transparent_Background.png)
+
+<!-- Nativescript !== WebAssembly -->
 
 ## Charactersitics
 
-| SDK                                       | Maintainer | Language   | Library      | Output             | OS                  |                                                  |
-| ----------------------------------------- | ---------- | ---------- | ------------ | ------------------ | ------------------- | ------------------------------------------------ |
-| [Android](https://developer.android.com/) | Google     | Kotlin     |              |                    | Android             |                                                  |
-| [iOS](https://developer.apple.com/ios/)   | Apple      | Swift      |              |                    | iOS                 |                                                  |
-| [Flutter](https://flutter.dev/)           | Google     | Dart       | Flutter      | Machine Code       | (Web), Android, iOS | [Showcase](https://flutter.dev/showcase)         |
-| [React Native](https://reactnative.dev/)  | Facebook   | TypeScript | React        | Native Equivalents | (Web), Android, iOS |                                                  |
-| [Ionic](https://ionicframework.com/)      | Drifty Co. | TypeScript | Any          | Web View           | Web, Android, iOS   | [Showcase](https://ionicframework.com/customers) |
-| [NativeScript](https://nativescript.org/) | nStudio    | TypeScript | Angular, Vue | Native Equivalents | Web, Android, iOS   | [Showcase](https://nativescript.org/showcases)   |
+<style scoped>
+table { font-size: 0.9rem; }
+table img { margin-right: 0.5ch; max-height: 20px; width: 20px; }
+</style>
 
-[Source](https://academind.com/learn/flutter/react-native-vs-flutter-vs-ionic-vs-nativescript-vs-pwa/)
-
-## Strengths
-
-| SDK                                       | Write Once | Components | Performance |
-| ----------------------------------------- | ---------- | ---------- | ----------- |
-| [Android](https://flutter.dev/)           | --         | +++        | +++         |
-| [iOS](https://flutter.dev/)               | --         | +++        | +++         |
-| [Flutter](https://flutter.dev/)           | ++         | +++        | ++          |
-| [React Native](https://reactnative.dev/)  | +          | -          | ++          |
-| [Ionic](https://ionicframework.com/)      | +++        | +++        |             |
-| [NativeScript](https://nativescript.org/) | +          |            | ++          |
-
-[Source](https://academind.com/learn/flutter/react-native-vs-flutter-vs-ionic-vs-nativescript-vs-pwa/)
+| SDK                                                                                                       | Maintainer | Language                                                                                                  | Library               | Primary IDE                            | Output Code                         | Output UI                                   | OS                  |                                                                                        |
+| --------------------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------- | ----------------------------------- | ------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------- |
+| ![](https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png) Android                    | Google     | Kotlin                                                                                                    | Android SDK           | Android Studio                         | Native                              | native                                      | Android             |                                                                                        |
+| ![](https://upload.wikimedia.org/wikipedia/commons/4/48/Apple_iOS_new.svg) iOS                            | Apple      | Swift                                                                                                     | iOS SDK               | Xcode                                  | Native                              | native                                      | iOS                 |                                                                                        |
+| ![](https://cdn.worldvectorlogo.com/logos/flutter-logo.svg) Flutter                                       | Google     | Dart                                                                                                      | Flutter SDK           | Android Studio, IntelliJ IDEA, VS Code | Native                              | platform-specific [Skia](https://skia.org/) | (Web), Android, iOS | [Architecture](https://flutter.dev/docs/resources/technical-overview)                  |
+| ![](https://reactnative.dev/img/header_logo.svg) React Native                                             | Facebook   | TypeScript                                                                                                | React                 | Any                                    | JavaScript, Native Widgets (Bridge) | native                                      | (Web), Android, iOS | [Architecture](https://reactnative.dev/docs/intro-react-native-components)             |
+| ![](https://ionicframework.com/img/meta/favicon-192x192.png) Ionic                                        | Drifty     | TypeScript                                                                                                | Angular, React, (Vue) | Any                                    | JavaScript, Native APIs (WebView)   | platform-specific, (shared)                 | Web, Android, iOS   | [Architecture](https://ionicframework.com/docs/core-concepts/fundamentals)             |
+| ![](https://upload.wikimedia.org/wikipedia/commons/4/4f/NativeScript_logo.png) NativeScript               | nStudio    | TypeScript                                                                                                | Angular, Vue          | Any                                    | JavaScript, Native APIs (Bridge)    | native                                      | Web, Android, iOS   | [Architecture](https://docs.nativescript.org/angular/core-concepts/technical-overview) |
+| ![](https://seeklogo.com/images/X/xamarin-logo-348B1EB629-seeklogo.com.png) Xamarin                       | Microsoft  | C#, [XAML](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax) | .NET                  | Visual Studio                          | Native / IL                         | platform-specific [Skia](https://skia.org/) | Android, iOS        | [Architecture](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin)   |
+| ![](https://s3.amazonaws.com/uno-website-assets/wp-content/uploads/2018/08/22113759/UnoLogoSmall.png) Uno | nventive   | C#, XAML                                                                                                  | .NET, Uno.UI          | Visual Studio                          | Native / IL / WebAssembly           | platform-specific, (shared)                 | Web, Android, iOS   | [Architecture](https://platform.uno/how-it-works/)                                     |
 
 ## Framework Popularity
 
-![height:400px](library_gh_star_history.png)
+![height:400px](star-history.t9t.io_.png)
 
-[Source](https://star-history.t9t.io/#flutter/flutter&facebook/react-native&ionic-team/ionic-framework&NativeScript/NativeScript)
+[Source](https://star-history.t9t.io/#flutter/flutter&facebook/react-native&ionic-team/ionic-framework&NativeScript/NativeScript&unoplatform/uno)
 
-## Language Popularity
+## Language & Platform Popularity
 
-[StackOverflow Survey 2020](https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages-professional-developers)
+[Languages](https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages-professional-developers)
+[Platforms](https://insights.stackoverflow.com/survey/2020#technology-platforms)
 
-## PWA Case Studies
+![height:400px](https://fossbytes.com/wp-content/uploads/2020/05/stack-overflow_most-loved-dreaded-wanted-programming-language.jpg)
 
-- Flipkart, Twitter Lite, Starbucks
-- [Google PWA Case Studies](https://developers.google.com/web/showcase)
-- [PWA Stats Case Studies](https://www.pwastats.com/)
-- [Mobile Web vs. Native Apps or Why You Want Both](https://www.lukew.com/ff/entry.asp?1954)
+## AMP
+
+![height:75px](https://amp.dev/static/img/favicon.png)
+
+[Docs](https://amp.dev)
+[How it works](https://amp.dev/about/how-amp-works)
+[Cache](https://amp.dev/documentation/guides-and-tutorials/learn/amp-caches-and-cors/how_amp_pages_are_cached)
+[Playground](https://playground.amp.dev)
 
 # ✋ Thank you!
 
