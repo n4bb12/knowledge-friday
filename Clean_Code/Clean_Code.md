@@ -1,44 +1,76 @@
 ---
 marp: true
-paginate: true
 ---
+
+<!-- marp: true -->
+<!-- paginate: true -->
+<!-- headingDivider: 2 -->
+<!-- footer: '[Abraham Schilling](https://github.com/n4bb12), 19.07.2020' -->
+
+<!-- N4BB12 Theme -->
+<style>
+  section {
+    font-size: 1.5rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #224466;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    width: 100%;
+    text-align: center;
+  }
+  h1 img,
+  h2 img,
+  h3 img,
+  h4 img,
+  h5 img,
+  h6 img,
+  p img {
+    display: inline;
+  }
+  blockquote,
+  ul,
+  ol,
+  p,
+  table {
+    width: auto;
+    margin: 0 auto 1rem;
+  }
+  strong {
+    color: #0366d6 !important;
+  }
+  img {
+    display: table;
+    margin: 0 auto;
+  }
+  footer {
+    font-size: 0.75rem;
+  }
+  footer a {
+    text-decoration: underline;
+    color: inherit;
+  }
+</style>
 
 <!-- Global style -->
 <style>
-section {
-  font-size: 1.5rem;
-}
-h1,h2,h3,h4,h5,h6 {
-  text-align: center;
-}
-h1 {
-  font-size: 2rem;
-}
-p {
-  width: 100%;
-  text-align: center;
-}
-strong {
-  color: #0366D6;
-}
-img {
-  display: table;
-  margin: 0 auto;
-  max-height: 80%;
-}
 pre {
   width: 1000px;
   margin: 0 auto;
   background: #0A0D14;
   color: white;
 }
-blockquote,
-ul,
-ol,
-p {
-  margin: 0 auto 1rem;
-}
-
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-type {
@@ -59,15 +91,11 @@ p {
 }
 </style>
 
-<!-- _backgroundColor: #0A0D14 -->
-<!-- _color: white -->
-<!-- _fontSize: 12px -->
-<!-- headingDivider: 2 -->
-
 # 🤤 Bad Code / 🥳 Clean Code
 
-<style local>
-img { display: inline; }
+<style scoped>
+section { background: #0A0D14; }
+h1 { font-size: 2rem; color: white; }
 </style>
 
 ![bg right](https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2593&q=80)
@@ -698,13 +726,13 @@ class User {
 ```ts
 button.addEventListener("click", () => {
   box.style.transform = "translateX(1000px)"
-  box.style.translate = "transform 1s ease-in-out"
 
   // Due to how the render loop queues animations, this transition needs
   // two nested calls to requestAnimationFrame. See more at:
   // https://www.youtube.com/watch?v=cCOL7MC4Pl0&t=20m29s
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
+      box.style.translate = "transform 1s ease-in-out"
       box.style.transform = "translateX(500px)"
     })
   })
@@ -891,6 +919,11 @@ const SearchInput: FC<SearchInputProps> = ({ onChange }) => (
 > 
 > *Robert C. Martin*
 
-# Thank you! 🤩
+# Thank you! 🙌
 
-![height:300](https://miro.medium.com/max/640/1*YSYhINS70gJpvT6ZeI09UA.jpeg)
+<style scoped>
+section { background: #0A0D14; }
+h1 { font-size: 2rem; color: white; }
+</style>
+
+![bg right:70% height:300px](https://miro.medium.com/max/640/1*YSYhINS70gJpvT6ZeI09UA.jpeg)
