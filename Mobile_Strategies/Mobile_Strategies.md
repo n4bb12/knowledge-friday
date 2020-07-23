@@ -36,7 +36,8 @@ marp: true
   h4 img,
   h5 img,
   h6 img,
-  p img {
+  p img,
+  pre img {
     display: inline;
   }
   blockquote,
