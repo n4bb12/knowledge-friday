@@ -1,5 +1,6 @@
 section {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 h1,
 h2,
@@ -8,6 +9,7 @@ h4,
 h5,
 h6 {
   color: #224466;
+  margin-bottom: 1.5rem;
 }
 h1,
 h2,
@@ -25,24 +27,26 @@ h3 img,
 h4 img,
 h5 img,
 h6 img,
-p img,
 pre img {
   display: inline;
+}
+p img {
+  display: table;
 }
 blockquote,
 ul,
 ol,
-p,
-table {
+table
+pre {
   width: auto;
   margin: 0 auto 1rem;
 }
-strong {
-  color: #0366d6 !important;
+p {
+  width: auto;
+  margin: 0 auto 0.5rem;
 }
-img {
-  display: table;
-  margin: 0 auto;
+pre + pre {
+  margin-top: -0.75rem;
 }
 footer {
   font-size: 0.75rem;
@@ -52,10 +56,12 @@ footer a {
   color: inherit;
 }
 pre {
-  width: 1000px;
-  margin: 0 auto;
+  width: 90%;
+  margin: 0 auto 1rem;
+  border: 0;
   background: #0a0d14;
   color: white;
+  font-size: 1rem;
 }
 .hljs-keyword,
 .hljs-selector-tag,
