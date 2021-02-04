@@ -1,3 +1,5 @@
+https://github.com/foobaragency/knowledge-friday/issues/2#issuecomment-772878027
+
 ## Authoring Types
 
 <!-- header: "" -->
