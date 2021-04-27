@@ -2,7 +2,7 @@ import fs, { writeFile } from "fs-extra"
 import globby from "globby"
 import path from "path"
 import dayjs from "dayjs"
-import execa from "execa"
+import { marpCli } from "@marp-team/marp-cli"
 
 const [, , project] = process.argv
 
@@ -47,8 +47,7 @@ async function main() {
   const merged = contents.map((content) => content.trim()).join("\n\n")
 
   await writeFile(bundleFile, merged, "utf8")
-
-  await execa(`yarn marp ${bundleFile}`, { stdio: "inherit", shell: true })
+  await marpCli([bundleFile])
 }
 
 main().catch((error) => {
