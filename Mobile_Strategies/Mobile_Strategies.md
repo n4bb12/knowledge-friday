@@ -143,7 +143,7 @@ p { color: white; font-weight: bold; }
 - Submission reviews
 - Possibility of rejection
 
---> *Delay*
+--> _Delay_
 
 [Review Guidelines 4.2](https://developer.apple.com/app-store/review/guidelines/#minimum-functionality)
 
@@ -169,7 +169,7 @@ p { color: white; font-weight: bold; }
 - [Android Deep Links](https://developer.android.com/training/app-links/deep-linking) | [iOS Universal Links](https://developer.apple.com/ios/universal-links/)
 - [Google Play Pass](https://play.google.com/about/play-pass/) | [Apple Arcade](https://www.apple.com/de/apple-arcade/)
 
---> *Get users through the web*
+--> _Get users through the web_
 
 ## Finding Web Content
 
@@ -187,7 +187,7 @@ High-friction install-first philosophy:
 
 - [Android Instant Apps](https://www.youtube.com/watch?v=oispNrpGnIY) | [iOS App Clips](https://www.youtube.com/watch?v=IqP_iojZXxQ)
 
---> *Requires a website*
+--> _Requires a website_
 
 ## Web Onboarding
 
@@ -208,11 +208,11 @@ h1 { padding-top: 40%; }
 
 ![bg](https://images.unsplash.com/photo-1517098343-2547f8016001?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2168&q=80)
 
-----
+---
 
 ![height:75px](https://upload.wikimedia.org/wikipedia/commons/d/d5/Progressive_Web_Apps_Logo.svg)
 
-Web applications built on standard browser APIs 
+Web applications built on standard browser APIs
 that feel and can be used like native mobile apps.
 
 ## Features (OS Integration, Sensors)
@@ -226,7 +226,7 @@ https://whatwebcando.today
 
 ## Case Studies
 
-Facebook Lite, Twitter Lite, Aliexpress, Forbes, Pinterest, 
+Facebook Lite, Twitter Lite, Aliexpress, Forbes, Pinterest,
 Uber, Tinder, Flipboard, Starbucks, Alibaba, Lancome
 
 - [Google PWA Case Studies](https://developers.google.com/web/showcase)
@@ -248,14 +248,14 @@ section { justify-content: flex-start; }
 </style>
 
 ![bg height:150px](https://upload.wikimedia.org/wikipedia/commons/5/54/Blank_Canvas_on_Transparent_Background.png)
-![bg height:75px](https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png) 
+![bg height:75px](https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png)
 ![bg height:75px](https://upload.wikimedia.org/wikipedia/commons/4/48/Apple_iOS_new.svg)
 ![bg height:75px](https://cdn.worldvectorlogo.com/logos/flutter-logo.svg)
-![bg height:75px](https://reactnative.dev/img/header_logo.svg) 
-![bg height:75px](https://ionicframework.com/img/meta/favicon-192x192.png) 
-![bg height:75px](https://upload.wikimedia.org/wikipedia/commons/4/4f/NativeScript_logo.png) 
-![bg height:75px](https://seeklogo.com/images/X/xamarin-logo-348B1EB629-seeklogo.com.png) 
-![bg height:75px](https://s3.amazonaws.com/uno-website-assets/wp-content/uploads/2018/08/22113759/UnoLogoSmall.png) 
+![bg height:75px](https://reactnative.dev/img/header_logo.svg)
+![bg height:75px](https://ionicframework.com/img/meta/favicon-192x192.png)
+![bg height:75px](https://upload.wikimedia.org/wikipedia/commons/4/4f/NativeScript_logo.png)
+![bg height:75px](https://seeklogo.com/images/X/xamarin-logo-348B1EB629-seeklogo.com.png)
+![bg height:75px](https://s3.amazonaws.com/uno-website-assets/wp-content/uploads/2018/08/22113759/UnoLogoSmall.png)
 ![bg height:150px](https://upload.wikimedia.org/wikipedia/commons/5/54/Blank_Canvas_on_Transparent_Background.png)
 
 <!-- Nativescript !== WebAssembly -->

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "knowledge-friday",
+  "version": "0.0.0-development",
+  "private": true,
+  "repository": "git@github.com:n4bb12/knowledge-friday.git",
+  "license": "ISC",
+  "author": "Abraham Schilling",
+  "scripts": {
+    "build": "ts-node --transpile-only build",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^1.0.1",
+    "@types/fs-extra": "^9.0.11",
+    "dayjs": "^1.10.4",
+    "execa": "^5.0.0",
+    "fs-extra": "^9.1.0",
+    "globby": "^11.0.3",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}

@@ -1,3 +1,5 @@
+<!-- Theme -->
+<style>
 section {
   font-size: 1.25rem;
   line-height: 1.5;
@@ -36,7 +38,7 @@ p img {
 blockquote,
 ul,
 ol,
-table
+table,
 pre {
   width: auto;
   margin: 0 auto 1rem;
@@ -81,3 +83,4 @@ pre {
 .hljs-title {
   color: #ee7600;
 }
+</style>

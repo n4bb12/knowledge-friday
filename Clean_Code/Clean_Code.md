@@ -110,9 +110,10 @@ h1 { font-size: 2rem; color: white; }
 ## Why does it matter?
 
 ![bg right:40% height:300](https://i.redd.it/51dcpxhdwcox.jpg)
+
 > One of our difficulties will be the maintenance of an appropriate discipline, so that we do not **lose track of what we are doing**.
-> 
-> *Alan Turing*
+>
+> _Alan Turing_
 
 ## The cost of **fixing software defects** is exponential.
 
@@ -127,8 +128,8 @@ h1 { font-size: 2rem; color: white; }
 ![height:150](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTB56pvjUXrAOR05TKwWlGmKiPCShOU3NJ5LA&usqp=CAU)
 
 > High internal quality keeps cruft to a minimum, allowing a team to add features with less effort, time, and cost.
-> 
-> *Martin Fowler, author of Refactoring, Chief Scientist at ThoughtWorks, software consultant and public speaker.*
+>
+> _Martin Fowler, author of Refactoring, Chief Scientist at ThoughtWorks, software consultant and public speaker._
 
 [Is High Quality Software Worth the Cost?](https://martinfowler.com/articles/is-quality-worth-cost.html)
 
@@ -143,8 +144,8 @@ h1 { font-size: 2rem; color: white; }
 ![bg right:40% height:300](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ4G_Ejs-7ySTG3V_QASHb2aIa3J6KImix3Lw&usqp=CAU)
 
 > Complexity is the worst enemy of security, and our systems are getting more complex all the time.
-> 
-> *Bruce Schneier, Security Technologist, Researcher and Lecturer, Harvard Kennedy School*
+>
+> _Bruce Schneier, Security Technologist, Researcher and Lecturer, Harvard Kennedy School_
 
 ## You won't fix it later.
 
@@ -157,8 +158,8 @@ h1 { font-size: 2rem; color: white; }
 ![bg left:40% height:300](https://cleancoders.com/images/portraits/robert-martin.jpg)
 
 > The only way to go fast, is to go well.
-> 
-> *Robert C. Martin - author of Clean Code, The Clean Coder and Clean Architecture, founder of the Agile Manifesto, public speaker, proponent of software craftsmanship.*
+>
+> _Robert C. Martin - author of Clean Code, The Clean Coder and Clean Architecture, founder of the Agile Manifesto, public speaker, proponent of software craftsmanship._
 
 ## What is Clean Code? 🥳
 
@@ -168,11 +169,11 @@ h1 { font-size: 2rem; color: white; }
 
 - Clean code is simple and direct.
 - Clean code reads like well-written prose.
-- Clean code never obscures the designer’s intent but rather is 
-full of crisp abstractions and straightforward lines of control.
+- Clean code never obscures the designer’s intent but rather is
+  full of crisp abstractions and straightforward lines of control.
 
-> *Grady Booch,
-> Object-Oriented Analysis and Design with Applications*
+> _Grady Booch,
+> Object-Oriented Analysis and Design with Applications_
 
 ## What is Bad Code? 🤤
 
@@ -204,7 +205,7 @@ Influence of code characteristics on complexity:
 
 <!-- header: "" -->
 
-----
+---
 
 <!-- header: "Strong Cohesion" -->
 
@@ -217,7 +218,7 @@ Cohesive code is...
 - more reusable
 - more horizontally flat
 
-----
+---
 
 Extract functions until they can't be reasonably split.
 
@@ -255,7 +256,7 @@ initializeGame() {
 }
 ```
 
-----
+---
 
 Move related things closely together.
 Separate weakly related things.
@@ -283,7 +284,7 @@ button {
 }
 ```
 
-----
+---
 
 Move related things closely together.
 Separate weakly related things.
@@ -305,7 +306,7 @@ handleMouseDrag() {
 }
 ```
 
-----
+---
 
 Convert comments to function names.
 
@@ -319,7 +320,7 @@ this.setKnobX(elementWidth * this.ratio)
 this.updateKnobPosition()
 ```
 
-----
+---
 
 Single responsibility
 
@@ -345,7 +346,7 @@ class Game {
 }
 ```
 
-----
+---
 
 Split files with more than 200 lines.
 Strive for less than 100 lines.
@@ -354,7 +355,7 @@ Strive for less than 100 lines.
 
 <!-- header: "" -->
 
-----
+---
 
 <!-- header: "Good Naming" -->
 
@@ -369,7 +370,7 @@ changeValue
 togglePrivacyCheckbox
 ```
 
-----
+---
 
 <!-- header: "Good Naming" -->
 
@@ -384,7 +385,7 @@ timeCreated
 timeLastModified
 ```
 
-----
+---
 
 <!-- header: "Good Naming" -->
 
@@ -398,7 +399,7 @@ const customers2 = customers.sort(...)
 const customersByAgeDesc = customers.sort(...)
 ```
 
-----
+---
 
 Be **specific**.
 
@@ -410,7 +411,7 @@ spawnPlayer()
 spawnPlayerAtRandomPosition()
 ```
 
-----
+---
 
 But not unnecessarily verbose.
 
@@ -422,7 +423,7 @@ sumOfPriceOfAllProductsInCart
 totalPrice
 ```
 
-----
+---
 
 Make **meaningful distinctions**.
 Avoid misinformation.
@@ -453,7 +454,7 @@ function ensureCartExists() {
 }
 ```
 
-----
+---
 
 <!-- header: "Good Naming" -->
 
@@ -468,7 +469,7 @@ elapsedTimeInDays
 elapsedDays
 ```
 
-----
+---
 
 Be **conceptually consistent**.
 
@@ -484,7 +485,7 @@ getUserDetails()
 getCart()
 ```
 
-----
+---
 
 Avoid mixing concepts.
 
@@ -498,10 +499,9 @@ initializePlayerPosition()
 setPlayerHealth(100)
 ```
 
-----
+---
 
 Avoid duplicate context.
-
 
 ```ts
 // 💩
@@ -511,10 +511,9 @@ vehicle.setVehicleSpeed(500)
 vehicle.setSpeed(500)
 ```
 
-----
+---
 
 Avoid type information.
-
 
 ```ts
 // 💩
@@ -524,10 +523,9 @@ personList
 people
 ```
 
-----
+---
 
 Prioritize **readability**.
-
 
 ```ts
 // 💩
@@ -541,7 +539,7 @@ hasHooves
 hasFur
 ```
 
-----
+---
 
 Use **pronounceable** names.
 
@@ -553,7 +551,7 @@ itemCnt
 itemCount
 ```
 
-----
+---
 
 Avoid ambiguity.
 
@@ -567,7 +565,7 @@ selectedOption
 highlightedOption
 ```
 
-----
+---
 
 Avoid guesswork.
 Replace magic numbers with **named constants**.
@@ -580,7 +578,7 @@ const products = products.slice(0, 24)
 const products = products.slice(0, productsPerPage)
 ```
 
-----
+---
 
 Avoid guesswork.
 Replace unclear inline arguments with **named constants**.
@@ -597,12 +595,12 @@ sendEmail(recepient, subject, message, requestReadReceipt)
 sendEmail({
   recepient,
   subject,
-  message, 
+  message,
   requestReadReceipt: true,
 })
 ```
 
-----
+---
 
 Avoid encodings, cryptic prefixes and type information.
 
@@ -616,7 +614,7 @@ interface User {}
 interface PayPalUser {}
 ```
 
-----
+---
 
 Stick to **library conventions**.
 
@@ -630,7 +628,7 @@ onChange // react
 onImageUploadComplete // you
 ```
 
-----
+---
 
 Stick to **library conventions**.
 
@@ -652,7 +650,7 @@ you
 <Image src="https://example.com" />
 ```
 
-----
+---
 
 Stick to **library conventions**.
 
@@ -674,7 +672,7 @@ you
 <Button active />
 ```
 
-----
+---
 
 Stick to **language conventions**.
 
@@ -695,7 +693,7 @@ firstName
 <!-- header: "Meaningful Comments" -->
 
 ```ts
-i++; // increment
+i++ // increment
 ```
 
 ## 🤮
@@ -714,10 +712,10 @@ public SellResponse beginSellItem(SellRequest sellRequest)
 
 ```ts
 class User {
-  /** The user's firstname */ 
+  /** The user's firstname */
   private firstname: string
 
-  /** The user's lastname */ 
+  /** The user's lastname */
   private lastname: string
 }
 ```
@@ -760,7 +758,7 @@ https://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-co
 
 <!-- header: "" -->
 
-----
+---
 
 <!-- header: "Simplicity" -->
 
@@ -774,7 +772,7 @@ if (!isUninjured) {
 if (isInjured) {
 ```
 
-----
+---
 
 Avoid unnecessary control flow.
 
@@ -790,21 +788,21 @@ if (customerAge < requiredAge) {
 return customerAge >= requiredAge
 ```
 
-----
+---
 
 Make it easy to call functions.
 Prefer few arguments or accept data objects.
 
 ```ts
 // 💩
-function createAccount(firstName: string, lastName: string, birthday: Date, 
+function createAccount(firstName: string, lastName: string, birthday: Date,
   street: string, zipcode: string, city: string, email: string, ...)
 
 // ✨
 function createAccount(details: AccountDetails) {}
 ```
 
-----
+---
 
 Find elegant solutions.
 
@@ -812,7 +810,7 @@ Find elegant solutions.
 // 💩
 function findMaximum(values: number[]) {
   let max = -Number.MAX_SAFE_INTEGER
-  values.forEach(value => {
+  values.forEach((value) => {
     if (value > max) {
       max = value
     }
@@ -863,7 +861,7 @@ Then assembling things becomes easy.
 // 💩
 const SearchInput: FC= () => {
   const [orders, setOrders] = useState<Order[]>([])
-  
+
   const onChange = (e) => {
     const input = e.target.value
     const apiURL = `...`
@@ -917,8 +915,8 @@ const SearchInput: FC<SearchInputProps> = ({ onChange }) => (
 ![bg left:40% height:300](https://cleancoders.com/images/portraits/robert-martin.jpg)
 
 > It is not enough for code to work. Code that works is often badly broken. Programmers who satisfy themselves with merely working code are behaving unprofessionally. They may fear that they don’t have time to improve the structure and design of their code, but I disagree. Nothing has a more profound and long-term degrading effect upon a development project than bad code.
-> 
-> *Robert C. Martin*
+>
+> _Robert C. Martin_
 
 # Thank you! 🙌
 
