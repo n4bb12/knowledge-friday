@@ -1,6 +1,6 @@
 import { marpCli } from "@marp-team/marp-cli"
 import dayjs from "dayjs"
-import fs, { readJson, writeFile } from "fs-extra"
+import { readFile, readJson, writeFile } from "fs-extra"
 import globby from "globby"
 import path from "path"
 import prettier from "prettier"
@@ -13,19 +13,33 @@ function join(...inputs: string[]) {
   return posixify(path.join(...inputs))
 }
 
-export function getMarkdownInputGlobs(project: string) {
-  return [join(project, `**/*.md`), "!" + getMarkdownOutputPath(project)]
+async function getPrettierConfig() {
+  const prettierConfig = await readJson("./.prettierrc")
+  return { ...prettierConfig, parser: "markdown" }
+}
+
+function getThemePath() {
+  return join(__dirname, "theme.html")
 }
 
 export function getMarkdownOutputPath(project: string) {
-  return join(project, path.basename(project) + ".md")
+  return join(project, "index.md")
 }
 
 export function getHtmlOutputPath(project: string) {
-  return join(project, path.basename(project) + ".html")
+  return join(project, "index.html")
 }
 
-function generatePragma() {
+export function getFilesToWatch(project: string) {
+  return [
+    join(project, `**/*`),
+    getThemePath(),
+    "!" + getMarkdownOutputPath(project),
+    "!" + getHtmlOutputPath(project),
+  ]
+}
+
+function getPragma() {
   const date = dayjs().format("DD.MM.YYYY")
   return `
 ---
@@ -33,37 +47,72 @@ marp: true
 ---
 
 <!-- paginate: true -->
-<!-- headingDivider: 3 -->
+<!-- headingDivider: 1 -->
 <!-- footer: '[Abraham Schilling](https://github.com/n4bb12), ${date}' -->
   `
 }
 
-async function getPrettierConfig() {
-  const prettierConfig = await readJson("./.prettierrc")
-  return { ...prettierConfig, parser: "markdown" }
+async function findFiles(project: string, name: string) {
+  return globby([join(project, name) + ".{md,html}"])
+}
+
+async function getFile(project: string, name: string) {
+  const files = await findFiles(project, name)
+  if (files.length < 1) {
+    throw new Error(`Not found: "${name}"`)
+  }
+  if (files.length > 1) {
+    throw new Error(`Ambiguous: "${name}"`)
+  }
+  return files[0]
+}
+
+async function readBaseTheme() {
+  return readFile(getThemePath(), "utf8")
+}
+
+async function readToc(project: string) {
+  const file = join(project, "toc")
+  return readFile(file, "utf8")
+}
+
+async function readInputFile(input: string) {
+  const name = path.basename(input, path.extname(input))
+  const content = await readFile(input, "utf8")
+
+  if (content.startsWith("<style>") || content.startsWith("#")) {
+    return content
+  }
+
+  return `# ${name}\n\n` + content
 }
 
 export async function buildProject(project: string) {
-  const theme = join(__dirname, "theme.md")
-  const mdInputGlobs = getMarkdownInputGlobs(project)
-  const mdOutput = getMarkdownOutputPath(project)
-  const mdInputs = await globby(mdInputGlobs)
+  const toc = await readToc(project)
 
-  if (!mdInputs.length) {
+  const inputs = await Promise.all(
+    toc
+      .split(/[\r\n]/g)
+      .filter(Boolean)
+      .map((name) => getFile(project, name)),
+  )
+
+  if (!inputs.length) {
     console.log("No inputs.")
     return
   }
 
   const contents = await Promise.all([
-    generatePragma(),
-    fs.readFile(theme, "utf8"),
-    ...mdInputs.sort().map((input) => fs.readFile(input, "utf8")),
+    getPragma(),
+    readBaseTheme(),
+    ...inputs.map(readInputFile),
   ])
 
   const merged = contents.map((content) => content.trim()).join("\n\n")
   const prettierConfig = await getPrettierConfig()
   const formatted = prettier.format(merged, prettierConfig)
+  const mdOutput = getMarkdownOutputPath(project)
 
   await writeFile(mdOutput, formatted, "utf8")
-  await marpCli([mdOutput])
+  await marpCli([mdOutput, "--html"])
 }

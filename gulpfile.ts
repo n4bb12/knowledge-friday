@@ -3,7 +3,7 @@ import gulp from "gulp"
 import minimist from "minimist"
 import path from "path"
 
-import { buildProject, getHtmlOutputPath, getMarkdownInputGlobs } from "./build"
+import { buildProject, getFilesToWatch, getHtmlOutputPath } from "./build"
 
 const { project } = minimist(process.argv.slice(2))
 
@@ -14,17 +14,16 @@ export async function build() {
 export async function dev() {
   await build()
 
-  const bs = browserSync.create()
-
-  const mdInputs = getMarkdownInputGlobs(project)
+  const inputs = getFilesToWatch(project)
   const htmlOutput = getHtmlOutputPath(project)
 
+  const bs = browserSync.create()
   bs.init({
     server: { baseDir: project },
     open: "local",
     startPath: path.basename(htmlOutput),
   })
 
-  gulp.watch(mdInputs, build)
+  gulp.watch(inputs, build)
   gulp.watch(htmlOutput).on("change", bs.reload)
 }
