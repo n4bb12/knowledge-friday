@@ -7,7 +7,6 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "scripts": {
-    "build": "gulp build",
     "dev": "gulp dev",
     "format": "prettier --write ."
   },
