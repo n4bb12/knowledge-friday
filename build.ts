@@ -1,10 +1,8 @@
+import { marpCli } from "@marp-team/marp-cli"
+import dayjs from "dayjs"
 import fs, { writeFile } from "fs-extra"
 import globby from "globby"
 import path from "path"
-import dayjs from "dayjs"
-import { marpCli } from "@marp-team/marp-cli"
-
-const [, , project] = process.argv
 
 function posixify(input: string) {
   return input.replace(/\\/g, "/")
@@ -12,6 +10,18 @@ function posixify(input: string) {
 
 function join(...inputs: string[]) {
   return posixify(path.join(...inputs))
+}
+
+export function getMarkdownInputGlobs(project: string) {
+  return [join(project, `**/*.md`), "!" + getMarkdownOutputPath(project)]
+}
+
+export function getMarkdownOutputPath(project: string) {
+  return join(project, path.basename(project) + ".md")
+}
+
+export function getHtmlOutputPath(project: string) {
+  return join(project, path.basename(project) + ".html")
 }
 
 function generatePragma() {
@@ -27,13 +37,13 @@ marp: true
   `
 }
 
-async function main() {
+export async function buildProject(project: string) {
   const theme = join(__dirname, "theme.md")
-  const mdFiles = await globby([join(project, `/**/*.md`)])
-  const bundleFile = join(project, path.basename(project) + ".md")
-  const fragments = mdFiles.filter((file) => file !== bundleFile)
+  const mdInputGlobs = getMarkdownInputGlobs(project)
+  const mdOutput = getMarkdownOutputPath(project)
+  const mdInputs = await globby(mdInputGlobs)
 
-  if (!fragments.length) {
+  if (!mdInputs.length) {
     console.log("No inputs.")
     return
   }
@@ -41,16 +51,11 @@ async function main() {
   const contents = await Promise.all([
     generatePragma(),
     fs.readFile(theme, "utf8"),
-    ...fragments.sort().map((input) => fs.readFile(input, "utf8")),
+    ...mdInputs.sort().map((input) => fs.readFile(input, "utf8")),
   ])
 
   const merged = contents.map((content) => content.trim()).join("\n\n")
 
-  await writeFile(bundleFile, merged, "utf8")
-  await marpCli([bundleFile])
+  await writeFile(mdOutput, merged, "utf8")
+  await marpCli([mdOutput])
 }
-
-main().catch((error) => {
-  console.error(error)
-  process.exit(1)
-})
