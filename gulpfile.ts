@@ -12,6 +12,8 @@ export async function build() {
 }
 
 export async function dev() {
+  await build()
+
   const bs = browserSync.create()
 
   const mdInputs = getMarkdownInputGlobs(project)

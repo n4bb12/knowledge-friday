@@ -1,8 +1,9 @@
 import { marpCli } from "@marp-team/marp-cli"
 import dayjs from "dayjs"
-import fs, { writeFile } from "fs-extra"
+import fs, { readJson, writeFile } from "fs-extra"
 import globby from "globby"
 import path from "path"
+import prettier from "prettier"
 
 function posixify(input: string) {
   return input.replace(/\\/g, "/")
@@ -37,6 +38,11 @@ marp: true
   `
 }
 
+async function getPrettierConfig() {
+  const prettierConfig = await readJson("./.prettierrc")
+  return { ...prettierConfig, parser: "markdown" }
+}
+
 export async function buildProject(project: string) {
   const theme = join(__dirname, "theme.md")
   const mdInputGlobs = getMarkdownInputGlobs(project)
@@ -55,7 +61,9 @@ export async function buildProject(project: string) {
   ])
 
   const merged = contents.map((content) => content.trim()).join("\n\n")
+  const prettierConfig = await getPrettierConfig()
+  const formatted = prettier.format(merged, prettierConfig)
 
-  await writeFile(mdOutput, merged, "utf8")
+  await writeFile(mdOutput, formatted, "utf8")
   await marpCli([mdOutput])
 }
