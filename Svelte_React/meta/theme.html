@@ -1,0 +1,45 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700&display=swap");
+
+  :root {
+    --back: #ffffff;
+    --back-light: #f6fafd;
+    --back-api: #eff8ff;
+    --prime: #ff3e00;
+    --second: #676778;
+    --flash: #40b3ff;
+    --text: #444;
+    --font: "Overpass", sans-serif;
+    --font-mono: "Fira Mono", monospace;
+
+    color: var(--text);
+    font-family: var(--font);
+    font-weight: 300;
+  }
+  h1,
+  h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--second);
+  }
+  a {
+    color: var(--prime);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+  a:hover,
+  a:active {
+    color: var(--flash);
+    text-decoration: none;
+  }
+  footer a {
+    text-decoration: none;
+  }
+  .svelte {
+    color: var(--prime);
+  }
+  .react {
+    color: #61dbfb;
+    color: #224466;
+  }
+</style>

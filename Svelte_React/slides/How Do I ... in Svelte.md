@@ -1,0 +1,51 @@
+https://svelte.dev/docs
+
+- Component Format
+  - html
+    - {expressions}
+    - disabled={disabled}, {disabled}
+    - slot, slot name="name", slot="name", $$slots, slot {item}, slot let:item
+    - class, class:name={value}
+    - style={``}
+    - @html
+    - on:eventname|modifiers={handler}
+    - bind:property={variable}, bind:duration, bind:group
+  - script
+    - props --> export let
+    - $$props, $$restProps
+    - context=module
+    - createEventDispatcher
+  - style
+- Hooks https://github.com/joshnuss/react-hooks-in-svelte
+  - useState --> not needed
+  - useEffect --> onMount, onDestroy, beforeUpdate, afterUpdate, tick, or not needed
+  - useMemo --> $:
+  - useRef --> bind:this
+  - useCallback --> not needed
+  - useContext --> setContext, getContext, hasContext
+- global state --> svelte/store, writeable, readable, derived, get, $value
+- Structural directives
+  - #if/elseif/else
+  - #each, index, key
+- Only in Svelte
+  - #await, then, catch
+  - #key
+  - @debug
+  - use:action
+  - animations
+    - svelte/transition
+      - transition:fn|local={params}
+      - in:fn|local={params}
+      - out:fn|local={params}
+      - animate:name={params}
+    - svelte/motion
+      - tweened
+      - spring
+    - svelte/easing
+  - svelte:selv
+  - svelte:component
+  - svelte:window
+  - svelte:body
+  - svelte:head
+  - svelte:options
+  - svelte:fragment

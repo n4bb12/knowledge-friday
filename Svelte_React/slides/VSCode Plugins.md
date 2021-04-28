@@ -1,0 +1,5 @@
+- [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) — syntax highlighting / formatting / intellisense 💬
+- [Svelte 3 Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets) — `s-` prefixed snippets 🚀
+- [Svelte Dark](https://marketplace.visualstudio.com/items?itemName=NickScialli.svelte-dark) — dark theme inspired by Svelte 💅
+- ❌ You DON'T need [Svelte Intellisense](https://marketplace.visualstudio.com/items?itemName=ardenivanov.svelte-intellisense), it is unmaintained, outdated, and its features are included in the main extension
+- ❌ You DON'T need [svelte-format](https://marketplace.visualstudio.com/items?itemName=melihaltintas.svelte-format), formatting is included in the main extension and uses Prettier via [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte#prettierrc-example)
