@@ -1,13 +1,14 @@
-<h1 align="center">
+<h1>
   💡 Knowledge Friday
 </h1>
 
-<p align="center">
-  Presentations and code examples for sharing knowledge<br>
-  <a href="https://knowledge-friday.vercel.app">https://knowledge-friday.vercel.app</a>
-</p>
+Presentations and code examples for sharing knowledge
+[https://knowledge-friday.vercel.app](https://knowledge-friday.vercel.app)
 
-<p align="center">
-  Vote for future topics at<br>
-  <a href="https://github.com/foobaragency/knowledge-friday/issues">https://github.com/foobaragency/knowledge-friday/issues</a>
-</p>
+Vote for future topics at
+[https://github.com/foobaragency/knowledge-friday/issues](https://github.com/foobaragency/knowledge-friday/issues)
+
+Develop Slides by running
+```bash
+yarn dev --project <project>
+```
