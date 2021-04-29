@@ -19,9 +19,9 @@ export async function dev() {
 
   const bs = browserSync.create()
   bs.init({
-    server: { baseDir: project },
+    server: { baseDir: "." },
     open: "local",
-    startPath: path.basename(htmlOutput),
+    startPath: htmlOutput,
   })
 
   gulp.watch(inputs, build)
