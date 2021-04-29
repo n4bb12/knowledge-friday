@@ -306,7 +306,7 @@ tsc --listFiles
 tsc --showConfig --project tsconfig.json
 ```
 
-![](../resources/go-to-project-configuration.png)
+![](resources/go-to-project-configuration.png)
 
 ### Module Types
 

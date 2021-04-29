@@ -163,7 +163,7 @@ marp: true
 
 #
 
-![h:100](../resources/svelte.svg)
+![h:100](resources/svelte.svg)
 
 https://svelte.dev
 
@@ -304,13 +304,13 @@ https://svelte.dev/docs
 
 # Frameworks
 
-![h:100](../resources/svelte_kit.svg)
+![h:100](resources/svelte_kit.svg)
 https://kit.svelte.dev
 
 <br>
 <br>
 
-![h:100](../resources/svelte_native.svg)
+![h:100](resources/svelte_native.svg)
 https://svelte-native.technology
 
 <style scoped>
@@ -339,7 +339,7 @@ https://svelte-native.technology
 
 #
 
-![h:100](../resources/svelte_square.png)
+![h:100](resources/svelte_square.png)
 
 ## Thanks
 

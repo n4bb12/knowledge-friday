@@ -1,6 +1,6 @@
 #
 
-![h:100](../resources/svelte_square.png)
+![h:100](resources/svelte_square.png)
 
 ## Thanks
 
