@@ -2,7 +2,7 @@
 
 ![h:100](resources/svelte_square.png)
 
-## Thanks
+## Thanks 🍻
 
 <style scoped>
   section {

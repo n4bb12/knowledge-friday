@@ -4,14 +4,15 @@ marp: true
 
 <!-- paginate: true -->
 <!-- headingDivider: 1 -->
-<!-- footer: '[Abraham Schilling](https://github.com/n4bb12), 29.04.2021' -->
+<!-- footer: '[Abraham Schilling](https://github.com/n4bb12), 30.04.2021' -->
 
 <!-- Base Theme -->
 <style>
   section {
     font-size: 1.25rem;
     line-height: 1.5;
-    justify-content: start;
+    padding: 20%;
+    padding-top: 10%;
   }
   h1,
   h2,
@@ -40,9 +41,6 @@ marp: true
   h6 img,
   pre img {
     display: inline;
-  }
-  p img {
-    display: table;
   }
   blockquote,
   ul,
@@ -167,21 +165,31 @@ marp: true
 
 https://svelte.dev
 
-<style scoped>
-  section {
-    padding-top: 15%;
-  }
-</style>
+# Developer Interest
 
-# Approach
+![bg left height:50%](resources/star_history.png)
 
-- 🧹 No runtime library
+- Growing community
+- Great documentation
+- High developer satisfaction
+- SvelteKit
+
+[https://2020.stateofjs.com/technologies/front-end-frameworks](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/#front_end_frameworks_experience_ranking)
+
+# What is Svelte?
+
+Write declarative component code —
+<span class="svelte">Get optimized imperative code.</span>
+
+# Promises
+
+- 🧹 Tiny runtime
   https://svelte.dev/blog/frameworks-without-the-framework
 - 🐎 No DOM diffing
   https://svelte.dev/blog/virtual-dom-is-pure-overhead
 - 💀 Death to boilerplate
   https://svelte.dev/blog/write-less-code
-- 🔨 Let tools do the work
+- 🔨 Move manual labor into tools
   https://svelte.dev/blog/svelte-3-rethinking-reactivity
 
 # JS Size
@@ -206,7 +214,7 @@ next-realworld
 <h2 class="svelte">Svelte</h2>
 
 svelte template
-**2.0 kB**
+**1.9 kB**
 
 todo mvc
 **7.4 kB**
@@ -216,15 +224,23 @@ sveltekit-realworld
 
 </div>
 
-# Benchmark
+# Performance
 
-![bg left height:80%](resources/benchmark1.png)
-![bg left height:80%](resources/benchmark2.png)
-![bg left height:80%](resources/benchmark3.png)
+![bg left height:90%](resources/benchmark1.png)
+![bg left height:90%](resources/benchmark2.png)
+![bg left height:90%](resources/benchmark3.png)
+
+Fast enough for resource-contrained environments:
+
+Mobile Phones / Wearables / Smart Tvs / Car & Flight Infotainment Systems / Hand-Tools like Payment Devices
 
 https://krausest.github.io/js-framework-benchmark/2021/table_chrome_90.0.4430.72.html
 
-# Create App
+# How Do I ... in Svelte
+
+https://svelte.dev/docs
+
+# 🔨 Create App
 
 ```
 npx degit sveltejs/template svelte-app
@@ -234,84 +250,35 @@ yarn
 yarn dev
 ```
 
+OR
+
+```
+npm init svelte@next svelte-app
+cd svelte-app
+yarn
+yarn dev --open
+```
+
 <style scoped>
   pre {
     max-width: 50%;
   }
 </style>
 
-# How Do I ... in Svelte
+# VSCode Extensions
 
-https://svelte.dev/docs
-
-- Component Format
-  - html
-    - {expressions}
-    - disabled={disabled}, {disabled}
-    - slot, slot name="name", slot="name", $$slots, slot {item}, slot let:item
-    - class, class:name={value}
-    - style={``}
-    - @html
-    - on:eventname|modifiers={handler}
-    - bind:property={variable}, bind:duration, bind:group
-  - script
-    - props --> export let
-    - $$props, $$restProps
-    - context=module
-    - createEventDispatcher
-  - style
-- Hooks https://github.com/joshnuss/react-hooks-in-svelte
-  - useState --> not needed
-  - useEffect --> onMount, onDestroy, beforeUpdate, afterUpdate, tick, or not needed
-  - useMemo --> $:
-  - useRef --> bind:this
-  - useCallback --> not needed
-  - useContext --> setContext, getContext, hasContext
-- global state --> svelte/store, writeable, readable, derived, get, $value
-- Structural directives
-  - #if/elseif/else
-  - #each, index, key
-- Only in Svelte
-  - #await, then, catch
-  - #key
-  - @debug
-  - use:action
-  - animations
-    - svelte/transition
-      - transition:fn|local={params}
-      - in:fn|local={params}
-      - out:fn|local={params}
-      - animate:name={params}
-    - svelte/motion
-      - tweened
-      - spring
-    - svelte/easing
-  - svelte:selv
-  - svelte:component
-  - svelte:window
-  - svelte:body
-  - svelte:head
-  - svelte:options
-  - svelte:fragment
-
-# VSCode Plugins
-
-- [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) — syntax highlighting / formatting / intellisense 💬
-- [Svelte 3 Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets) — `s-` prefixed snippets 🚀
-- [Svelte Dark](https://marketplace.visualstudio.com/items?itemName=NickScialli.svelte-dark) — dark theme inspired by Svelte 💅
-- ❌ You DON'T need [Svelte Intellisense](https://marketplace.visualstudio.com/items?itemName=ardenivanov.svelte-intellisense), it is unmaintained, outdated, and its features are included in the main extension
-- ❌ You DON'T need [svelte-format](https://marketplace.visualstudio.com/items?itemName=melihaltintas.svelte-format), formatting is included in the main extension and uses Prettier via [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte#prettierrc-example)
-
-# Frameworks
-
-![h:100](resources/svelte_kit.svg)
-https://kit.svelte.dev
+- 👑 [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) — syntax highlighting / formatting / linting / quick fixes / code completion
+- 👑 [Svelte 3 Snippets](https://marketplace.visualstudio.com/items?itemName=fivethree.vscode-svelte-snippets) — comprehensive set of `s-`prefixed snippets
+- ❌ You DON'T need [Svelte Intellisense](https://marketplace.visualstudio.com/items?itemName=ardenivanov.svelte-intellisense) — it is unmaintained, outdated, and its features are included in the main extension
+- ❌ You DON'T need [svelte-format](https://marketplace.visualstudio.com/items?itemName=melihaltintas.svelte-format) — formatting is included in the main extension and integrates with Prettier via [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte#prettierrc-example)
 
 <br>
-<br>
 
-![h:100](resources/svelte_native.svg)
-https://svelte-native.technology
+https://svelte.dev/blog/setting-up-your-editor
+
+# Coding
+
+<img src="https://media4.giphy.com/media/3oKIPnAiaMCws8nOsE/200w.gif?cid=6889e3d5lemyy3a30dij7ukc6t37afjbf9h4z2n2qhbwhbzw&rid=200w.gif&ct=g" width="300"/>
 
 <style scoped>
   img {
@@ -319,29 +286,30 @@ https://svelte-native.technology
   }
 </style>
 
-# Rethinking Reactivity
+# 🤕 Pain Points
 
-<iframe
-  width="640"
-  height="360"
-  src="https://www.youtube-nocookie.com/embed/AdNJ3fydeao"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
+- Emitting events seems complicated
+- Unnatural `x = x` workaround for object mutations
+- Default imports vs. refactoring file names
+- Auto-import and linting somtimes confused about instance vs module context
+- No styled-jsx-like style expressions
+- Explicit build dependencies and config, no managed upgrade path
 
-<style scoped>
-  iframe {
-    margin: 0 auto;
-  }
-</style>
+# Frameworks
+
+![h:100](resources/svelte_kit.svg)
+https://kit.svelte.dev (will replace Sapper)
+
+<br>
+
+![h:100](resources/svelte_native.svg)
+https://svelte-native.technology
 
 #
 
 ![h:100](resources/svelte_square.png)
 
-## Thanks
+## Thanks 🍻
 
 <style scoped>
   section {
