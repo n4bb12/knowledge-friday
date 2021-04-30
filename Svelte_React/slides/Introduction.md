@@ -47,7 +47,7 @@ next-realworld
 <h2 class="svelte">Svelte</h2>
 
 svelte template
-**1.9 kB**
+**2.0 kB**
 
 todo mvc
 **7.4 kB**
