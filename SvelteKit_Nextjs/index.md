@@ -4,7 +4,7 @@ marp: true
 
 <!-- paginate: true -->
 <!-- headingDivider: 1 -->
-<!-- footer: '[Abraham Schilling](https://github.com/n4bb12), 05.05.2021' -->
+<!-- footer: '[Abraham Schilling](https://github.com/n4bb12), 07.05.2021' -->
 
 <!-- Base Theme -->
 <style>
@@ -173,8 +173,8 @@ https://kit.svelte.dev
 # 🔨 Create App
 
 ```
-npm init svelte@next svelte-app
-cd svelte-app
+npm init svelte@next sveltekit-app
+cd sveltekit-app
 yarn
 yarn dev --open
 ```
@@ -202,7 +202,7 @@ https://svelte.dev/blog/setting-up-your-editor
 
 <br>
 
-https://github.com/n4bb12/svektekit-example
+https://github.com/n4bb12/sveltekit-app
 
 <style scoped>
   img {

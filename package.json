@@ -8,6 +8,7 @@
   "author": "Abraham Schilling",
   "scripts": {
     "dev": "gulp dev",
+    "build": "gulp build",
     "format": "prettier --write ."
   },
   "devDependencies": {
