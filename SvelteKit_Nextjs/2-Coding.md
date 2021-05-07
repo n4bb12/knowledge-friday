@@ -1,8 +1,8 @@
 # 🔨 Create App
 
 ```
-npm init svelte@next svelte-app
-cd svelte-app
+npm init svelte@next sveltekit-app
+cd sveltekit-app
 yarn
 yarn dev --open
 ```
@@ -30,7 +30,7 @@ https://svelte.dev/blog/setting-up-your-editor
 
 <br>
 
-https://github.com/n4bb12/svektekit-example
+https://github.com/n4bb12/sveltekit-app
 
 <style scoped>
   img {
