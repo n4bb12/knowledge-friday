@@ -1,7 +1,6 @@
 import browserSync from "browser-sync"
 import gulp from "gulp"
 import minimist from "minimist"
-import path from "path"
 
 import { buildProject, getFilesToWatch, getHtmlOutputPath } from "./build"
 

@@ -8,8 +8,14 @@ https://knowledge-friday.vercel.app
 Vote for future topics at
 https://github.com/foobaragency/knowledge-friday/issues
 
-Develop Slides by running
+Develop slides by running
 
 ```bash
-yarn dev --project <project>
+yarn marp:dev --project <project>
+```
+
+Build slides once by running
+
+```bash
+yarn marp:build --project <project>
 ```
