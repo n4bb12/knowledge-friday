@@ -7,8 +7,8 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "scripts": {
-    "marp:dev": "gulp dev",
-    "marp:build": "gulp build",
+    "dev": "gulp dev",
+    "build": "gulp build",
     "format": "prettier --write ."
   },
   "devDependencies": {

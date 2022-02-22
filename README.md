@@ -11,11 +11,11 @@ https://github.com/foobaragency/knowledge-friday/issues
 Develop slides by running
 
 ```bash
-yarn marp:dev --project <project>
+yarn dev --project <project>
 ```
 
 Build slides once by running
 
 ```bash
-yarn marp:build --project <project>
+yarn build --project <project>
 ```
