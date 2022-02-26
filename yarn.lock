@@ -36,9 +36,9 @@
     "@cspotcode/source-map-consumer" "0.8.0"
 
 "@marp-team/marp-cli@^1.0.1":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@marp-team/marp-cli/-/marp-cli-1.6.0.tgz#480010aaf39bdd90a3fba21b70ecad1f6fa59b4d"
-  integrity sha512-8M3uZ1M+iPyQot2eFZYwaoFUA4bVkx8DhCdCTRd3rGXOLU9Is9/jkRGC/8hzJ4mb0OnHBtt+VEvTvPgt+FiGQw==
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@marp-team/marp-cli/-/marp-cli-1.7.0.tgz#e7e7f2203272695c5ae0e9547c8b3e480bc03fbb"
+  integrity sha512-AdTQhOwR2YA+dYECBnw5V3sc2RKpNKKtQgxrGvl/a91eY6KcRYX2XHG7MwciKDqYdOVGkaErLcttRHj2AHV8RQ==
   dependencies:
     "@marp-team/marp-core" "^2.3.2"
     "@marp-team/marpit" "^2.2.2"
@@ -46,7 +46,7 @@
     cosmiconfig "^7.0.1"
     import-from "^4.0.0"
     is-wsl "^2.2.0"
-    puppeteer-core "13.3.1"
+    puppeteer-core "13.4.0"
     serve-index "^1.9.1"
     tmp "^0.2.1"
     v8-compile-cache "^2.3.0"
@@ -202,9 +202,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*", "@types/node@^17.0.19":
-  version "17.0.19"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.19.tgz#726171367f404bfbe8512ba608a09ebad810c7e6"
-  integrity sha512-PfeQhvcMR4cPFVuYfBN4ifG7p9c+Dlh3yUZR6k+5yQK7wX3gDgVxBly4/WkBRs9x4dmcy1TVl08SY67wwtEvmA==
+  version "17.0.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.21.tgz#864b987c0c68d07b4345845c3e63b75edd143644"
+  integrity sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==
 
 "@types/parse-glob@*":
   version "3.0.29"
@@ -1276,9 +1276,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.4.71:
-  version "1.4.71"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.71.tgz#17056914465da0890ce00351a3b946fd4cd51ff6"
-  integrity sha512-Hk61vXXKRb2cd3znPE9F+2pLWdIOmP7GjiTj45y6L3W/lO+hSnUSUhq+6lEaERWBdZOHbk2s3YV5c9xVl3boVw==
+  version "1.4.73"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.73.tgz#422f6f514315bcace9615903e4a9b6b9fa283137"
+  integrity sha512-RlCffXkE/LliqfA5m29+dVDPB2r72y2D2egMMfIy3Le8ODrxjuZNVo4NIC2yPL01N4xb4nZQLwzi6Z5tGIGLnA==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -2727,7 +2727,7 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.15.0.tgz#3f34a473ff18e15c1b5626b62903b5ad6e665fee"
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
-nanoid@^3.2.0:
+nanoid@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
   integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
@@ -3133,11 +3133,11 @@ postcss-value-parser@^4.2.0:
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
 postcss@^8.4.5:
-  version "8.4.6"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.6.tgz#c5ff3c3c457a23864f32cb45ac9b741498a09ae1"
-  integrity sha512-OovjwIzs9Te46vlEx7+uXB0PLijpwjXGKXjVGGPIGubGpq7uh5Xgf6D6FiJ/SzJMBosHDp6a2hiXOS97iBXcaA==
+  version "8.4.7"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.7.tgz#f99862069ec4541de386bf57f5660a6c7a0875a8"
+  integrity sha512-L9Ye3r6hkkCeOETQX6iOaWZgjp3LL6Lpqm6EtgbKrgqGGteRMNb9vzBfRL96YOSu8o7x3MfIH9Mo5cPJFGrW6A==
   dependencies:
-    nanoid "^3.2.0"
+    nanoid "^3.3.1"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
@@ -3191,10 +3191,10 @@ pumpify@^1.3.5:
     inherits "^2.0.3"
     pump "^2.0.0"
 
-puppeteer-core@13.3.1:
-  version "13.3.1"
-  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-13.3.1.tgz#2337320e0f19774a83460a732adf4a7198857c31"
-  integrity sha512-II9uo5MFh+otoJSoYp/kfY3jf1iWt0ySKyK8vFVfdbn3rl+k3SLh9nQRdINyoO1Kt6Tk4dPp6GZipD9jgU9wmw==
+puppeteer-core@13.4.0:
+  version "13.4.0"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-13.4.0.tgz#e44945f3da6f267fb165bf42df25d2e3313d3250"
+  integrity sha512-TcGT5Qgq9tgI0msFrIhq70N1+WrnGowjn0hc4vtzEIizJETXOZVrQZVWy051lO/nxEVGyqRXHwtpWjv4/fRbUw==
   dependencies:
     cross-fetch "3.1.5"
     debug "4.3.3"
