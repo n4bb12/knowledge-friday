@@ -280,7 +280,7 @@ table img { margin-right: 0.5ch; max-height: 20px; width: 20px; }
 
 ## Framework Popularity
 
-![height:400px](star-history.t9t.io_.png)
+![height:400px](./star-history.com_.png)
 
 [Source](https://star-history.t9t.io/#flutter/flutter&facebook/react-native&ionic-team/ionic-framework&NativeScript/NativeScript&unoplatform/uno)
 
