@@ -9,8 +9,8 @@ function posixify(input: string) {
   return input.replace(/\\/g, "/")
 }
 
-function join(...inputs: string[]) {
-  return posixify(path.join(...inputs))
+function join(input: string, ...inputs: string[]) {
+  return posixify(path.join(input, ...inputs))
 }
 
 async function getPrettierConfig() {
